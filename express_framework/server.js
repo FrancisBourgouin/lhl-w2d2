@@ -25,9 +25,17 @@ var addTodo = function(type, description) {
 
 // Endpoints
 // List of existing todos
-app.get('/todos', function(req, res) {
-  res.json(todos);
+app.get('/', function(req, res){
+  res.send('<h1>Hello world !</h1>')
+})
+
+app.get('/todos', function(request, response) {
+  response.json(todos);
 });
+
+app.get('/secret', function(req,res){
+  res.send('secret !')
+})
 
 // Endpoints or Routes
 // create a new todo

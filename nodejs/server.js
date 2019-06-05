@@ -43,7 +43,7 @@ var app = http.createServer(function(req, res) {
 
   switch (method) {
     case 'GET':
-      if (path === '/') {
+      if (path === '/secret') {
         // display index.html
 
         // To read a file with nodejs we need to create a stream
